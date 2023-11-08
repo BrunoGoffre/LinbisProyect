@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
   </ItemGroup>
@@ -14,9 +15,8 @@
   <ItemGroup>
     <Folder Include="Developers\Command\" />
     <Folder Include="Developers\EventHandlers\" />
-    <Folder Include="Proyects\Command\" />
+    <Folder Include="Developers\Queries\Response\" />
     <Folder Include="Proyects\EventHandlers\" />
-    <Folder Include="Proyects\Queries\" />
   </ItemGroup>
 
 </Project>

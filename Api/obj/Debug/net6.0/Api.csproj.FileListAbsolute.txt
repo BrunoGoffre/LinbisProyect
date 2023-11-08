@@ -37,3 +37,8 @@ D:\linbis\Linbis\Api\obj\Debug\net6.0\refint\Api.dll
 D:\linbis\Linbis\Api\obj\Debug\net6.0\Api.pdb
 D:\linbis\Linbis\Api\obj\Debug\net6.0\Api.genruntimeconfig.cache
 D:\linbis\Linbis\Api\obj\Debug\net6.0\ref\Api.dll
+D:\linbis\linbis\Api\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+D:\linbis\linbis\Api\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\linbis\linbis\Api\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+D:\linbis\linbis\Api\bin\Debug\net6.0\Infrastructure.dll
+D:\linbis\linbis\Api\bin\Debug\net6.0\Infrastructure.pdb

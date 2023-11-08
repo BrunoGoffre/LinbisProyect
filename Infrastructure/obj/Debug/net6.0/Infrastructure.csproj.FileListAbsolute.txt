@@ -1,0 +1,15 @@
+D:\linbis\linbis\Infrastructure\bin\Debug\net6.0\Infrastructure.deps.json
+D:\linbis\linbis\Infrastructure\bin\Debug\net6.0\Infrastructure.dll
+D:\linbis\linbis\Infrastructure\bin\Debug\net6.0\Infrastructure.pdb
+D:\linbis\linbis\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.AssemblyReference.cache
+D:\linbis\linbis\Infrastructure\obj\Debug\net6.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\linbis\linbis\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfoInputs.cache
+D:\linbis\linbis\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfo.cs
+D:\linbis\linbis\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.CoreCompileInputs.cache
+D:\linbis\linbis\Infrastructure\obj\Debug\net6.0\Infrastructure.dll
+D:\linbis\linbis\Infrastructure\obj\Debug\net6.0\refint\Infrastructure.dll
+D:\linbis\linbis\Infrastructure\obj\Debug\net6.0\Infrastructure.pdb
+D:\linbis\linbis\Infrastructure\obj\Debug\net6.0\ref\Infrastructure.dll
+D:\linbis\linbis\Infrastructure\bin\Debug\net6.0\Application.dll
+D:\linbis\linbis\Infrastructure\bin\Debug\net6.0\Application.pdb
+D:\linbis\linbis\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.CopyComplete

@@ -1,12 +1,14 @@
-﻿using Api;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Controllers;
+using Application.Proyects.Queries.Response;
+using Application.Developers.Queries;
 
 namespace Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
 
-    public class DevelopersController : ControllerBase
+    public class DevelopersController : ApiControllerBase
     {
         private readonly ILogger<WeatherForecastController> _logger;
         public DevelopersController(ILogger<WeatherForecastController> logger)
@@ -14,11 +16,11 @@ namespace Api.Controllers
             _logger = logger;
         }
 
-        [HttpGet(Name = "")]
-        public int Get()
-        {
-            return 0;
-        }
+        //[HttpGet({id})]
+        //public async Task<ActionResult<GetDevelopersResponse>> GetDeveloperById([FromQuery] int id)
+        //{
+        //    return await Mediator.Send(request);
+        //}
     }
 
 

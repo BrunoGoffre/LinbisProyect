@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Application.Proyects.Command;
+using Application.Proyects.Queries.Response;
 
 namespace Application.Interfaces
 {
     public interface IProyectService
     {
+        ProyectDTO AddDeveloper(AddDevelopersToProyectCommand developer);
     }
 }

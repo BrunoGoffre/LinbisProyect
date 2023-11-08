@@ -1,6 +1,6 @@
 ﻿namespace Application.Interfaces
 {
-    public  class IDevelopersService
+    public interface IDevelopersService
     {
     }
 }

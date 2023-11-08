@@ -1,6 +1,8 @@
-﻿namespace Infrastructure.Services
+﻿using Application.Interfaces;
+
+namespace Infrastructure.Services
 {
-    public class DevelopersService
+    public class DevelopersService : IDevelopersService
     {
     }
 }
