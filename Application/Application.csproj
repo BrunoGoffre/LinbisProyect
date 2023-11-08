@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Developers\Command\" />
+    <Folder Include="Developers\EventHandlers\" />
+    <Folder Include="Proyects\Command\" />
+    <Folder Include="Proyects\EventHandlers\" />
+    <Folder Include="Proyects\Queries\" />
+  </ItemGroup>
+
+</Project>
