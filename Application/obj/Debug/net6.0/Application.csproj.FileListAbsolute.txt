@@ -10,3 +10,6 @@ D:\linbis\linbis\Application\obj\Debug\net6.0\Application.dll
 D:\linbis\linbis\Application\obj\Debug\net6.0\refint\Application.dll
 D:\linbis\linbis\Application\obj\Debug\net6.0\Application.pdb
 D:\linbis\linbis\Application\obj\Debug\net6.0\ref\Application.dll
+D:\linbis\Linbis\Application\bin\Debug\net6.0\Domain.dll
+D:\linbis\Linbis\Application\bin\Debug\net6.0\Domain.pdb
+D:\linbis\Linbis\Application\obj\Debug\net6.0\Application.csproj.CopyComplete

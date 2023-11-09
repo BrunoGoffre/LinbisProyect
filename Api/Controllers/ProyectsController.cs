@@ -20,10 +20,9 @@ namespace Api.Controllers
 
         [HttpPost("{projectId}/developers")]
         [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(AddDevelopersToProyectResponse))]
-        public async Task<ActionResult> AddDeveloperToProyect(AddDevelopersToProyectCommand request)
+        public async Task<IActionResult> AddDeveloperToProyect(AddDevelopersToProyectCommand request)
         {
-            var proyectCreated = await Mediator.Send(request);
-            return StatusCode(201, proyectCreated);
+            return await Mediator.Send(request);
         }
 
         [HttpGet("{projectId}/developers")]

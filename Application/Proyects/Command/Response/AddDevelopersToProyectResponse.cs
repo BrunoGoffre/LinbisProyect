@@ -8,5 +8,6 @@ namespace Application.Proyects.Command.Response
 {
     public class AddDevelopersToProyectResponse
     {
+
     }
 }

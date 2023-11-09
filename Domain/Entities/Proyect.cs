@@ -12,5 +12,6 @@ namespace Domain.Entities
         public string Name { get; set; }
         public bool IsActive { get; set; }     
         public DateTimeOffset addedDate { get; set; }
+        public int EffortRequiredInDays { get; set; }
     }
 }

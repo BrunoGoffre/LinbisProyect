@@ -12,10 +12,6 @@ namespace Domain.Entities
         public string Name { get; set; }
         public int ProyectId { get; set; }
         public DateTimeOffset addedDate { get; set; }
+        public int costByDay { get; set; }
     }
 }
-//id: 5,
-//name: "test developer name",
-//projectId: 5,
-//addedDate: 1573843210,
-//costByDay: 700

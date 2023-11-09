@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\linbis\\linbis\\Domain\\Domain.csproj": {}
+    "D:\\linbis\\Linbis\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "D:\\linbis\\linbis\\Domain\\Domain.csproj": {
+    "D:\\linbis\\Linbis\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\linbis\\linbis\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\linbis\\Linbis\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\linbis\\linbis\\Domain\\Domain.csproj",
+        "projectPath": "D:\\linbis\\Linbis\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Bruno\\.nuget\\packages\\",
-        "outputPath": "D:\\linbis\\linbis\\Domain\\obj\\",
+        "outputPath": "D:\\linbis\\Linbis\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

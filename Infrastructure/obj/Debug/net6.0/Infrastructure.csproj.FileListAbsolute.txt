@@ -13,3 +13,5 @@ D:\linbis\linbis\Infrastructure\obj\Debug\net6.0\ref\Infrastructure.dll
 D:\linbis\linbis\Infrastructure\bin\Debug\net6.0\Application.dll
 D:\linbis\linbis\Infrastructure\bin\Debug\net6.0\Application.pdb
 D:\linbis\linbis\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.CopyComplete
+D:\linbis\Linbis\Infrastructure\bin\Debug\net6.0\Domain.dll
+D:\linbis\Linbis\Infrastructure\bin\Debug\net6.0\Domain.pdb

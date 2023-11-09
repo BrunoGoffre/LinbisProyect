@@ -5,6 +5,6 @@ namespace Application.Interfaces
 {
     public interface IProyectService
     {
-        ProyectDTO AddDeveloper(AddDevelopersToProyectCommand developer);
+        void AddDeveloper(AddDevelopersToProyectCommand developer);
     }
 }
