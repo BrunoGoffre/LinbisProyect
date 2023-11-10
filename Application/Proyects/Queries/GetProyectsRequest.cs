@@ -9,8 +9,6 @@ using Newtonsoft.Json;
 
 namespace Application.Developers.Queries
 {
-
-
     public class GetProyectsRequest : IRequest<GetProyectResponse>
     {
         public int ProyectId { get; set; }

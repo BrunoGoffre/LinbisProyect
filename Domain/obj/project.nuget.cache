@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UNSVU38Xm0DmRc+fTMerpGWwdFk0ZMpQ6Szvmmxld4Oq4WEgasHPTCtOEu5YITL5+sN4+89HLn+m6KVWR0Np1g==",
+  "dgSpecHash": "OhT1fhrRcLkoGGrGfVaxs44yAK/7uzlFCFinxgZZvlHipKeQzaKTcTybFCxpiRmcAsmwkS3aSVb1DoGiZeTghA==",
   "success": true,
-  "projectFilePath": "D:\\linbis\\Linbis\\Domain\\Domain.csproj",
+  "projectFilePath": "D:\\linbis\\LimbisProyect\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

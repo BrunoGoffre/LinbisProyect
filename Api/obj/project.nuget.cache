@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RTDzOFqwK6iutuHqsuc2mF6/MhBkdeTwmMxYXgK8OKimld9crVGMxVtnk7rOijQITIDNeiY4ZPF5oIqlY8pBaQ==",
+  "dgSpecHash": "3h7PWiiGRHmrJeFL+N5X3p9iHhKc2bZKYNe+yctCL+KtcygbwZrN1+kR0Pixg1gwZfR9JV3aUt3WkaDYV2QmXA==",
   "success": true,
-  "projectFilePath": "D:\\linbis\\Linbis\\Api\\Api.csproj",
+  "projectFilePath": "D:\\linbis\\LimbisProyect\\Api\\Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Bruno\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Bruno\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

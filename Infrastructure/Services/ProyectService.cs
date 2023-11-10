@@ -1,19 +1,10 @@
 ﻿using Application.Developers.Queries.Response;
 using Application.Interfaces;
-using Application.Proyects.Command;
 using Application.Proyects.Queries.Response;
 using AutoMapper;
-using Database;
 using Domain.Entities;
-using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics.Contracts;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Infrastructure.Services
 {

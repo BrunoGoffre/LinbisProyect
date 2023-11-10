@@ -2,7 +2,6 @@
 using Domain.Entities;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
-using System.Reflection;
 
 namespace Database
 {

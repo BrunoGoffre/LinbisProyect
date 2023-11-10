@@ -1,5 +1,4 @@
 ﻿using Domain.Entities;
-using Microsoft.Extensions.Configuration;
 
 namespace Application.Interfaces
 {

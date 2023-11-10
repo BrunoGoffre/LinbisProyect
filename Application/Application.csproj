@@ -7,6 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Developers\Command\**" />
+    <Compile Remove="Developers\EventHandlers\**" />
+    <Compile Remove="Proyects\EventHandlers\**" />
+    <EmbeddedResource Remove="Developers\Command\**" />
+    <EmbeddedResource Remove="Developers\EventHandlers\**" />
+    <EmbeddedResource Remove="Proyects\EventHandlers\**" />
+    <None Remove="Developers\Command\**" />
+    <None Remove="Developers\EventHandlers\**" />
+    <None Remove="Proyects\EventHandlers\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
@@ -14,10 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Developers\Command\" />
-    <Folder Include="Developers\EventHandlers\" />
     <Folder Include="Proyects\Command\Response\" />
-    <Folder Include="Proyects\EventHandlers\" />
   </ItemGroup>
 
   <ItemGroup>

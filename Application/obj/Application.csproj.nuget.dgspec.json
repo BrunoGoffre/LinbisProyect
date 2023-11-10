@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\linbis\\Linbis\\Application\\Application.csproj": {}
+    "D:\\linbis\\LimbisProyect\\Application\\Application.csproj": {}
   },
   "projects": {
-    "D:\\linbis\\Linbis\\Application\\Application.csproj": {
+    "D:\\linbis\\LimbisProyect\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\linbis\\Linbis\\Application\\Application.csproj",
+        "projectUniqueName": "D:\\linbis\\LimbisProyect\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "D:\\linbis\\Linbis\\Application\\Application.csproj",
+        "projectPath": "D:\\linbis\\LimbisProyect\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\Bruno\\.nuget\\packages\\",
-        "outputPath": "D:\\linbis\\Linbis\\Application\\obj\\",
+        "outputPath": "D:\\linbis\\LimbisProyect\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\linbis\\Linbis\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\linbis\\Linbis\\Domain\\Domain.csproj"
+              "D:\\linbis\\LimbisProyect\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\linbis\\LimbisProyect\\Domain\\Domain.csproj"
               }
             }
           }
@@ -85,14 +85,14 @@
         }
       }
     },
-    "D:\\linbis\\Linbis\\Domain\\Domain.csproj": {
+    "D:\\linbis\\LimbisProyect\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\linbis\\Linbis\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\linbis\\LimbisProyect\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\linbis\\Linbis\\Domain\\Domain.csproj",
+        "projectPath": "D:\\linbis\\LimbisProyect\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Bruno\\.nuget\\packages\\",
-        "outputPath": "D:\\linbis\\Linbis\\Domain\\obj\\",
+        "outputPath": "D:\\linbis\\LimbisProyect\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

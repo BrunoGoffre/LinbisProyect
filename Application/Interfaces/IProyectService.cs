@@ -1,6 +1,4 @@
-﻿using Application.Proyects.Command;
-using Application.Proyects.Queries.Response;
-using Domain.Entities;
+﻿using Application.Proyects.Queries.Response;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Application.Interfaces

@@ -1,11 +1,8 @@
-﻿using Api;
-using Application.Developers.Queries;
+﻿using Application.Developers.Queries;
 using Application.Proyects.Command;
 using Application.Proyects.Queries.Response;
 using Controllers;
-using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using System.Reflection;
 
 namespace Api.Controllers
 {
@@ -14,10 +11,8 @@ namespace Api.Controllers
 
     public class ProyectsController : ApiControllerBase
     {
-        private readonly ILogger<WeatherForecastController> _logger;
-        public ProyectsController(ILogger<WeatherForecastController> logger)
+        public ProyectsController()
         {
-            _logger = logger;
         }
 
         [HttpPost("{proyectId}/developers")]        
