@@ -3,6 +3,7 @@ using Application.Developers.Queries;
 using Application.Proyects.Command;
 using Application.Proyects.Queries.Response;
 using Controllers;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System.Reflection;
 
@@ -26,20 +27,22 @@ namespace Api.Controllers
             return await Mediator.Send(request);
         }
 
-        [HttpGet("{projectId}/developers")]
-        public async Task<ActionResult<GetProyectResponse>> GetProyectById([FromQuery] GetProyectsRequest request)
+        [HttpGet("{proyectId}/developers")]
+        public async Task<ActionResult<GetProyectResponse>> GetProyectById([FromRoute] int proyectId)
         {
+            var request = new GetProyectsRequest { ProyectId = proyectId };
             GetProyectResponse response = await Mediator.Send(request);
             if (response is null)
             {
                 return NotFound();
             }
-            return await Mediator.Send(request);
+            return Ok(response);
         }
 
-        [HttpDelete("{projectId}")]
-        public async Task<IActionResult> Delete(DeleteProyectCommand request)
+        [HttpDelete("{proyectId}")]
+        public async Task<IActionResult> Delete([FromRoute] int proyectId )
         {
+            var request = new DeleteProyectCommand { ProyectId = proyectId };
             return await Mediator.Send(request);
         }
 

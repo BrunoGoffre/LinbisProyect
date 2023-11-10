@@ -17,9 +17,8 @@ namespace Database
         {
             string path = _configuration.GetConnectionString("DevelopersLocalDatabase");
             List<Developer> objetList = this.GetAllData();
+            
             string json;
-
-
             if (objetList is not null)
             {
                 objetList.Add(newDeveloper);

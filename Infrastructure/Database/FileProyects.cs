@@ -42,6 +42,12 @@ namespace Database
             return GetAllData();
         }
 
+        public Proyect? GetProyectById(int proyectId)
+        {
+            Proyect proyect = GetAllData().FirstOrDefault(p => p.Id == proyectId);
+            return proyect != null ? proyect : null;
+        }
+
         private List<Proyect> GetAllData()
         {
             string path = _configuration.GetConnectionString("ProyectsLocalDatabase");
@@ -55,25 +61,16 @@ namespace Database
             return JsonConvert.DeserializeObject<List<Proyect>>(readedJson);
         }
 
-        public Proyect? GetProyectById(int proyectId)
-        {
-            Proyect proyect = GetAllData().FirstOrDefault(p => p.Id == proyectId);
-            return proyect != null ? proyect : null;
-        }
-
         private bool OverwriteAll(List<Proyect> proyectList)
         {
             string path = _configuration.GetConnectionString("ProyectsLocalDatabase");
-            string json;
 
-            if (proyectList is not null)
-            {
-                json = JsonConvert.SerializeObject(proyectList, Formatting.Indented);
-            }
-            else
+            if (proyectList is null)
             {
                 return false;
             }
+
+            string json = JsonConvert.SerializeObject(proyectList, Formatting.Indented);
 
             using (StreamWriter sw = new StreamWriter(path))
             {

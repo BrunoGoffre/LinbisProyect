@@ -41,11 +41,8 @@ namespace Infrastructure.Services
         public GetProyectResponse GetProyectById(int proyectId)
         {
             Proyect proyect = _fileProyects.GetProyectById(proyectId);
-            if (proyect is not null)
-            {
-                return _mapper.Map<GetProyectResponse>(proyect);
-            }
-            return null;
+            return _mapper.Map<GetProyectResponse>(proyect);
+            
         }
 
         private int GetDevelopmentCost(List<Developer> developers, int effortInDays)

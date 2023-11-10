@@ -1,7 +1,7 @@
 [
   {
     "Id": 1,
-    "Name": "Linbis v3",
+    "Name": "Linbis v1",
     "IsActive": true,
     "addedDate": "2022-11-09T18:40:10+00:00",
     "EffortRequiredInDays": 30
@@ -12,12 +12,5 @@
     "IsActive": true,
     "addedDate": "2022-11-09T18:40:10+00:00",
     "EffortRequiredInDays": 60
-  },
-  {
-    "Id": 3,
-    "Name": "Linbis v3",
-    "IsActive": false,
-    "addedDate": "2022-11-09T18:40:10+00:00",
-    "EffortRequiredInDays": 90
   }
 ]

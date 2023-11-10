@@ -2,11 +2,10 @@
 using Application.Common.Exceptions;
 using Application.Interfaces;
 using Application.Proyects.Queries.Response;
-using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace Application.Developers.Queries
 {
@@ -28,7 +27,7 @@ namespace Application.Developers.Queries
 
         public async Task<GetProyectResponse> Handle(GetProyectsRequest request, CancellationToken cancellationToken)
         {
-            GetProyectResponse proyectResponse = _service.GetProyectById(request.ProyectId);            
+            GetProyectResponse proyectResponse = _service.GetProyectById(request.ProyectId);
             return await Task.FromResult(proyectResponse);
         }
     }
