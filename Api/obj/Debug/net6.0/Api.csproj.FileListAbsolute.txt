@@ -116,3 +116,6 @@ D:\linbis\LimbisProyect\Api\obj\Debug\net6.0\refint\Api.dll
 D:\linbis\LimbisProyect\Api\obj\Debug\net6.0\Api.pdb
 D:\linbis\LimbisProyect\Api\obj\Debug\net6.0\Api.genruntimeconfig.cache
 D:\linbis\LimbisProyect\Api\obj\Debug\net6.0\ref\Api.dll
+D:\linbis\LimbisProyect\Api\bin\Debug\net6.0\FluentValidation.dll
+D:\linbis\LimbisProyect\Api\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+D:\linbis\LimbisProyect\Api\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll

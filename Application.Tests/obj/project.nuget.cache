@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ypQk89lOPrwm1DypKq9tNUG+TNse8mf9JvwOOov6vKmQe9i2e4y/mIXPGS9QgU88yBmUAJ/YSACx4bQkK8LwmQ==",
+  "dgSpecHash": "mCdqJUBxl1oRrAooiM2JpNPT7Xo/qluk8XpqHPNgN4zIpiXcd9fsBKoT8Ae7OV0k4sD/3J2djNZDjEEr9/WcDw==",
   "success": true,
   "projectFilePath": "D:\\linbis\\LimbisProyect\\Application.Tests\\Application.Tests.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,8 @@
     "C:\\Users\\Bruno\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\Bruno\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\Bruno\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
+    "C:\\Users\\Bruno\\.nuget\\packages\\fluentvalidation\\11.8.0\\fluentvalidation.11.8.0.nupkg.sha512",
+    "C:\\Users\\Bruno\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.8.0\\fluentvalidation.dependencyinjectionextensions.11.8.0.nupkg.sha512",
     "C:\\Users\\Bruno\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
     "C:\\Users\\Bruno\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\Bruno\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.1.0\\mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
