@@ -1,1 +1,30 @@
-﻿
+[
+  {
+    "Id": 1,
+    "Name": "Bruno Goffredo",
+    "ProyectId": 5,
+    "addedDate": "2019-11-15T18:40:10+00:00",
+    "costByDay": 5000
+  },
+  {
+    "Id": 1,
+    "Name": "Bruno Goffredo",
+    "ProyectId": 5,
+    "addedDate": "2019-11-15T18:40:10+00:00",
+    "costByDay": 5000
+  },
+  {
+    "Id": 1,
+    "Name": "Bruno Goffredo",
+    "ProyectId": 1,
+    "addedDate": "2019-11-15T18:40:10+00:00",
+    "costByDay": 5000
+  },
+  {
+    "Id": 4,
+    "Name": "Bruno Goffredo",
+    "ProyectId": 2,
+    "addedDate": "2019-11-15T18:40:10+00:00",
+    "costByDay": 5000
+  }
+]

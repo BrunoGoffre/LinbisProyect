@@ -1,5 +1,6 @@
 ﻿using Application.Interfaces;
 using Domain.Entities;
+using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using System.Reflection;
 
@@ -7,32 +8,51 @@ namespace Database
 {
     public class FileDevelopers : IFileDevelopers
     {
+        private readonly IConfiguration _configuration;
+        public FileDevelopers(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
         public void AddDeveloper(Developer newDeveloper)
         {
+            string path = _configuration.GetConnectionString("DevelopersLocalDatabase");
+            List<Developer> objetList = this.GetAllData();
+            string json;
 
-            //TODO Terminar escritura de datos
 
+            if (objetList is not null)
+            {
+                objetList.Add(newDeveloper);
+                json = JsonConvert.SerializeObject(objetList, Formatting.Indented);
 
+            }else
+            {
+                List<Developer> developers = new List<Developer> { newDeveloper } ;
+                json = JsonConvert.SerializeObject(developers, Formatting.Indented);
+            }
 
-
-            //string directorioEjecucion = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-
-            //// Combinar la ruta del directorio de ejecución con el nombre del archivo
-            //string rutaCompleta = Path.Combine(directorioEjecucion, "Developers.json");
-
-            //// Serializar el objeto a una cadena JSON
-            //string json = JsonConvert.SerializeObject(newDeveloper, Formatting.Indented);
-
-            //// Escribir la cadena JSON en un archivo sin File.WriteAllText
-            //using (StreamWriter sw = new StreamWriter(rutaCompleta))
-            //{
-            //    sw.Write(json);
-            //}
+            using (StreamWriter sw = new StreamWriter(path))
+            {
+                sw.Write(json);
+            }
         }
 
         public void ReadAll()
         {
             throw new NotImplementedException();
+        }
+
+        private List<Developer> GetAllData()
+        {
+            string path = _configuration.GetConnectionString("DevelopersLocalDatabase");
+
+            string readedJson;
+            using (StreamReader sr = new StreamReader(path))
+            {
+                readedJson = sr.ReadToEnd();
+            }
+
+            return JsonConvert.DeserializeObject<List<Developer>>(readedJson);
         }
 
     }

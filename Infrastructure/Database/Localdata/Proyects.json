@@ -1,1 +1,23 @@
-﻿
+﻿[
+  {
+    "id": 1,
+    "name": "Linbis",
+    "isActive": true,
+    "addedDate": "2023-10-23T18:40:10+00:00",
+    "effortRequireInDays": 30
+  },
+  {
+    "id": 2,
+    "name": "Linbis",
+    "isActive": true,
+    "addedDate": "2022-11-9T18:40:10+00:00",
+    "effortRequireInDays": 60
+  },
+  {
+    "id": 3,
+    "name": "Linbis",
+    "isActive": false,
+    "addedDate": "2022-10-15T18:40:10+00:00",
+    "effortRequireInDays": 90
+  }
+]

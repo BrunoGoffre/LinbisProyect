@@ -1,9 +1,10 @@
 ﻿using Application.Proyects.Command;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Application.Interfaces
 {
     public interface IDevelopersService
     {
-        void AddDeveloper(AddDevelopersToProyectCommand developer);
+        IActionResult AddDeveloper(AddDevelopersToProyectCommand developer);
     }
 }

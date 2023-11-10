@@ -2,8 +2,10 @@
 using Application.Proyects.Command;
 using Application.Proyects.Queries.Response;
 using AutoMapper;
+using Database;
 using Domain.Entities;
 using MediatR;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
@@ -16,19 +18,28 @@ namespace Infrastructure.Services
     public class ProyectService : IProyectService
     {
         private readonly IFileDevelopers _fileDevelopers;
+        private readonly IFileProyects _fileProyects;
         private readonly MapperConfiguration _mapperConfiguration;
         private readonly IMapper _mapper;
-        public ProyectService(IFileDevelopers fileDevelopers)
+        private readonly IConfiguration _configuration;
+        public ProyectService(IFileDevelopers fileDevelopers, IFileProyects fileProyects, IConfiguration configuration)
         {
             _fileDevelopers = fileDevelopers;
+            _fileProyects = fileProyects;
             _mapperConfiguration = InitMapperConfigurator();
+            _configuration = configuration;
         }
         public void AddDeveloper(AddDevelopersToProyectCommand developer)
         {
             
         }
 
-    private MapperConfiguration InitMapperConfigurator()
+        public List<Proyect> GetAll()
+        {
+            return _fileProyects.ReadAll();
+        }
+
+        private MapperConfiguration InitMapperConfigurator()
         {
             return new MapperConfiguration(cfg =>
             {

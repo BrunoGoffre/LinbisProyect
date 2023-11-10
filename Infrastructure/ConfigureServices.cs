@@ -25,8 +25,8 @@ public static class ConfigureServices
 
         //services.AddScoped<IApplicationDbContext>(provider => provider.GetRequiredService<ApplicationDbContext>());
 
-        services.AddTransient<IFileDevelopers, FileDevelopers>();
         services.AddTransient<IFileProyects, FileProyects>();
+        services.AddTransient<IFileDevelopers, FileDevelopers>();
         services.AddTransient<IDevelopersService, DevelopersService>();
         services.AddTransient<IProyectService, ProyectService>();
 

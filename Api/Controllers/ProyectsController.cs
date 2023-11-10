@@ -1,6 +1,5 @@
 ﻿using Api;
 using Application.Proyects.Command;
-using Application.Proyects.Command.Response;
 using Controllers;
 using Microsoft.AspNetCore.Mvc;
 using System.Reflection;
@@ -18,10 +17,11 @@ namespace Api.Controllers
             _logger = logger;
         }
 
-        [HttpPost("{projectId}/developers")]
-        [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(AddDevelopersToProyectResponse))]
-        public async Task<IActionResult> AddDeveloperToProyect(AddDevelopersToProyectCommand request)
+        [HttpPost("{proyectId}/developers")]
+        [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(IActionResult))]
+        public async Task<IActionResult> AddDeveloperToProyect([FromBody] AddDevelopersToProyectCommand request, [FromRoute] int proyectId)
         {
+            request.ProyectId = proyectId;
             return await Mediator.Send(request);
         }
 
