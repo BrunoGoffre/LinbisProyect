@@ -12,15 +12,15 @@ namespace Infrastructure.Services
     public class DevelopersService : IDevelopersService
     {
         private readonly IFileDevelopers _fileDevelopers;
-        private readonly IProyectService _proyectService;
+        private readonly IFileProyects _fileProyect;
         private readonly MapperConfiguration _mapperConfiguration;
         private readonly IMapper _mapper;
         private readonly IConfiguration _configuration;
 
-        public DevelopersService(IFileDevelopers fileDevelopers, IConfiguration configuration, IProyectService proyectService)
+        public DevelopersService(IFileDevelopers fileDevelopers, IFileProyects fileProyect, IConfiguration configuration)
         {
             _fileDevelopers = fileDevelopers;
-            _proyectService = proyectService;
+            _fileProyect = fileProyect;
             _mapperConfiguration = InitMapperConfigurator();
             _mapper = _mapperConfiguration.CreateMapper();
             _configuration = configuration;
@@ -28,7 +28,7 @@ namespace Infrastructure.Services
 
         public IActionResult AddDeveloper(AddDevelopersToProyectCommand request)
         {
-            List<Proyect> proyectList = _proyectService.GetAll();
+            List<Proyect> proyectList = _fileProyect.ReadAll();
 
             if (proyectList is not null)
             {
@@ -36,10 +36,10 @@ namespace Infrastructure.Services
                 {
                     Developer newDeveloper = _mapper.Map<Developer>(request);
                     _fileDevelopers.AddDeveloper(newDeveloper);
-                    return new ObjectResult($"Created Succesfully ") { StatusCode = 201 };
+                    return new ObjectResult($"Created Succesfully ") { StatusCode = StatusCodes.Status201Created };
                 }
             }
-            return new ObjectResult($"Bad request ") { StatusCode = 400 };
+            return new ObjectResult($"Bad request ") { StatusCode = StatusCodes.Status400BadRequest };
         }
 
         private MapperConfiguration InitMapperConfigurator()
@@ -50,8 +50,8 @@ namespace Infrastructure.Services
                     .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Developer.Id))
                     .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Developer.Name))
                     .ForMember(dest => dest.ProyectId, opt => opt.MapFrom(src => src.ProyectId))
-                    .ForMember(dest => dest.addedDate, opt => opt.MapFrom(src => DateTimeOffset.FromUnixTimeSeconds(src.Developer.AddedDate)))
-                    .ForMember(dest => dest.costByDay, opt => opt.MapFrom(src => src.Developer.costByDay));
+                    .ForMember(dest => dest.AddedDate, opt => opt.MapFrom(src => DateTimeOffset.FromUnixTimeSeconds(src.Developer.AddedDate)))
+                    .ForMember(dest => dest.CostByDay, opt => opt.MapFrom(src => src.Developer.costByDay));
             });
         }
     }

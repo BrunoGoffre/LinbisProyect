@@ -1,4 +1,5 @@
 ﻿using Domain.Entities;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +12,8 @@ namespace Application.Interfaces
     {
         List<Proyect> ReadAll();
         void AddProyect();
+
+        public Proyect? GetProyectById(int proyectId);
+        IActionResult DeleteProyect(int proyectId);
     }
 }

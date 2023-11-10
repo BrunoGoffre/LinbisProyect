@@ -31,7 +31,7 @@ namespace Application.Proyects.Command
             }
             catch (Exception ex)
             {
-                return new ObjectResult($"Failed on developer creation ") { StatusCode = 500 };
+                return new ObjectResult($"Failed on developer creation ") { StatusCode = StatusCodes.Status500InternalServerError };
             }            
         }
     }

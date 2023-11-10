@@ -1,5 +1,7 @@
 ﻿using Api;
+using Application.Developers.Queries;
 using Application.Proyects.Command;
+using Application.Proyects.Queries.Response;
 using Controllers;
 using Microsoft.AspNetCore.Mvc;
 using System.Reflection;
@@ -17,8 +19,7 @@ namespace Api.Controllers
             _logger = logger;
         }
 
-        [HttpPost("{proyectId}/developers")]
-        [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(IActionResult))]
+        [HttpPost("{proyectId}/developers")]        
         public async Task<IActionResult> AddDeveloperToProyect([FromBody] AddDevelopersToProyectCommand request, [FromRoute] int proyectId)
         {
             request.ProyectId = proyectId;
@@ -26,11 +27,22 @@ namespace Api.Controllers
         }
 
         [HttpGet("{projectId}/developers")]
-        public int Get()
+        public async Task<ActionResult<GetProyectResponse>> GetProyectById([FromQuery] GetProyectsRequest request)
         {
-            return 0;
+            GetProyectResponse response = await Mediator.Send(request);
+            if (response is null)
+            {
+                return NotFound();
+            }
+            return await Mediator.Send(request);
         }
-        
+
+        [HttpDelete("{projectId}")]
+        public async Task<IActionResult> Delete(DeleteProyectCommand request)
+        {
+            return await Mediator.Send(request);
+        }
+
 
     }
 

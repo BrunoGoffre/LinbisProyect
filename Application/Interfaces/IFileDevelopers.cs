@@ -5,7 +5,8 @@ namespace Application.Interfaces
 {
     public interface IFileDevelopers
     {
-        void ReadAll();
         void AddDeveloper(Developer newDeveloper);
+
+        List<Developer> GetDevelopersByProyectId(int proyectId);
     }
 }

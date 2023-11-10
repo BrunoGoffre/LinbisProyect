@@ -11,8 +11,8 @@ namespace Domain.Entities
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public int ProyectId { get; set; }
-        public DateTimeOffset addedDate { get; set; }
-        public int costByDay { get; set; }
+        public int? ProyectId { get; set; }
+        public DateTimeOffset AddedDate { get; set; }
+        public int CostByDay { get; set; }
     }
 }

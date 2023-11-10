@@ -37,9 +37,10 @@ namespace Database
             }
         }
 
-        public void ReadAll()
+        public List<Developer> GetDevelopersByProyectId(int proyectId)
         {
-            throw new NotImplementedException();
+            List<Developer> developers = this.GetAllData();
+            return developers.Where(d => d.ProyectId == proyectId).ToList();
         }
 
         private List<Developer> GetAllData()

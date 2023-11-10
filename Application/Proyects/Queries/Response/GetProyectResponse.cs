@@ -1,6 +1,4 @@
-﻿using Application.Common.Mappings;
-using Application.Developers.Queries.Response;
-using Domain.Entities;
+﻿using Application.Developers.Queries.Response;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace Application.Proyects.Queries.Response
 {
-    public class ProyectDTO : IMapFrom<Proyect>
+    public class GetProyectResponse
     {
         public string Name { get; set; }
         public bool IsActive { get; set; }
-        public DateTimeOffset addedDate { get; set; }
+        public long addedDate { get; set; }
         public int developmentCost { get; set; }
         public int effortRequireInDays { get; set; }
-        public List<DeveloperDTO> ? Developers { get; set; }
+        public List<DeveloperDTO>? Developers { get; set; }
     }
 }

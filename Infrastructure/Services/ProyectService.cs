@@ -1,10 +1,12 @@
-﻿using Application.Interfaces;
+﻿using Application.Developers.Queries.Response;
+using Application.Interfaces;
 using Application.Proyects.Command;
 using Application.Proyects.Queries.Response;
 using AutoMapper;
 using Database;
 using Domain.Entities;
 using MediatR;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
@@ -27,28 +29,55 @@ namespace Infrastructure.Services
             _fileDevelopers = fileDevelopers;
             _fileProyects = fileProyects;
             _mapperConfiguration = InitMapperConfigurator();
+            _mapper = _mapperConfiguration.CreateMapper();
             _configuration = configuration;
         }
-        public void AddDeveloper(AddDevelopersToProyectCommand developer)
+
+        public IActionResult DeleteProyect(int proyectId)
         {
-            
+            return _fileProyects.DeleteProyect(proyectId);
         }
 
-        public List<Proyect> GetAll()
+        public GetProyectResponse GetProyectById(int proyectId)
         {
-            return _fileProyects.ReadAll();
+            Proyect proyect = _fileProyects.GetProyectById(proyectId);
+            if (proyect is not null)
+            {
+                return _mapper.Map<GetProyectResponse>(proyect);
+            }
+            return null;
+        }
+
+        private int GetDevelopmentCost(List<Developer> developers, int effortInDays)
+        {
+            int result = -1;
+            if (developers is not null)
+            {
+                developers.ForEach(developer =>
+                {
+                    result += developer.CostByDay * effortInDays;
+                });
+            }
+            return result;
         }
 
         private MapperConfiguration InitMapperConfigurator()
         {
             return new MapperConfiguration(cfg =>
             {
-                cfg.CreateMap<AddDevelopersToProyectCommand, Developer>()
-                    .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Developer.Id))
-                    .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Developer.Name))
-                    .ForMember(dest => dest.ProyectId, opt => opt.MapFrom(src => src.Developer.ProyectId))
-                    .ForMember(dest => dest.addedDate, opt => opt.MapFrom(src => src.Developer.AddedDate))
-                    .ForMember(dest => dest.costByDay, opt => opt.MapFrom(src => src.Developer.costByDay));
+                cfg.CreateMap<Developer, DeveloperDTO>()
+                .ForMember(dest => dest.AddedDate, opt => opt.MapFrom(src => src.AddedDate.ToUnixTimeMilliseconds()))
+                    ;
+
+                cfg.CreateMap<Proyect, GetProyectResponse>()
+                    .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name))
+                    .ForMember(dest => dest.IsActive, opt => opt.MapFrom(src => src.IsActive))
+                    .ForMember(dest => dest.addedDate, opt => opt.MapFrom(src => src.addedDate.ToUnixTimeMilliseconds()))
+                    .ForMember(dest => dest.effortRequireInDays, opt => opt.MapFrom(src => src.EffortRequiredInDays))
+                    .ForMember(dest => dest.developmentCost, opt => opt.MapFrom(src => GetDevelopmentCost(_fileDevelopers.GetDevelopersByProyectId(src.Id), src.EffortRequiredInDays)))
+                    .ForMember(dest => dest.Developers, opt => opt.MapFrom(src => _fileDevelopers.GetDevelopersByProyectId(src.Id)))
+                    ;
+
             });
         }
     }

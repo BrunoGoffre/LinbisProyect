@@ -1,23 +1,23 @@
-﻿[
+[
   {
-    "id": 1,
-    "name": "Linbis",
-    "isActive": true,
-    "addedDate": "2023-10-23T18:40:10+00:00",
-    "effortRequireInDays": 30
+    "Id": 1,
+    "Name": "Linbis v3",
+    "IsActive": true,
+    "addedDate": "2022-11-09T18:40:10+00:00",
+    "EffortRequiredInDays": 30
   },
   {
-    "id": 2,
-    "name": "Linbis",
-    "isActive": true,
-    "addedDate": "2022-11-9T18:40:10+00:00",
-    "effortRequireInDays": 60
+    "Id": 2,
+    "Name": "Linbis v2",
+    "IsActive": true,
+    "addedDate": "2022-11-09T18:40:10+00:00",
+    "EffortRequiredInDays": 60
   },
   {
-    "id": 3,
-    "name": "Linbis",
-    "isActive": false,
-    "addedDate": "2022-10-15T18:40:10+00:00",
-    "effortRequireInDays": 90
+    "Id": 3,
+    "Name": "Linbis v3",
+    "IsActive": false,
+    "addedDate": "2022-11-09T18:40:10+00:00",
+    "EffortRequiredInDays": 90
   }
 ]
